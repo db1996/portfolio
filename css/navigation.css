@@ -1,0 +1,155 @@
+/* CSS Document */
+body{
+	font-family:Century Gothic;
+	position:relative;
+	padding: 0px;
+	margin: 0px;
+}
+Header{
+	font-size: 24px;
+	position: fixed;
+	width: 100%;
+	background-color: #e6e2af;
+	display: flex;
+	flex-wrap: wrap;
+	z-index:5;
+	justify-content: space-between;
+	box-shadow: 0px 5px 25px #888888;
+	padding: 20px 0px 20px 0px;
+	transition:all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+}
+
+.links{
+	color: #046380;
+	transition:all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	padding: 5px;
+	cursor: pointer;
+	text-decoration:none;
+}
+.links:hover{
+	box-shadow: 0px 0px 25px black;
+	color: #002f2f;
+	
+}
+.logoDiv{
+	font-size: 30px;
+	margin-left: 20px;
+}
+.navLinksDiv{
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction: row;
+	align-items: center;
+	margin-right: 20px;	
+	margin-left: 16px;
+}
+.navCurrIndex{
+	color: #002f2f;
+}
+#menuButtonDiv{
+	width: 80px;
+	height: 80px;
+	position:fixed;
+	top:0px;
+	left: -150px;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition:all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+}
+#menuButtonDiv img{
+	transition:all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	width: 30px;
+	cursor: pointer;
+}
+#menuButtonDiv img:hover{
+	width: 40px;
+}
+#sideBarNav{
+	font-size: 24px;
+	width: 150px;
+	height:100vh;
+	position:fixed;
+	top:0px;
+	left: -150px;
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction: column;
+	background-color:rgba(230,226,175,1);
+	transition:all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+}
+#flexItem{
+	margin-top: 100px;	
+}
+#rightNavContainer{
+	position: fixed;
+	right: 30px;
+	top: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	transition:all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	z-index: 3;
+	
+}
+.rightNavLabels{
+	opacity: 0;
+	transition:all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	margin-right: 5px;
+	color: #046380;
+	cursor:pointer;
+}
+.rightNavLinks{
+	width:20px;
+	height:20px;
+	
+	background-color:#046380;
+	border-radius:10px;	
+	transition:all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	cursor:pointer;
+}
+.rightNavLinkContainer{
+	margin-top: 5px;
+	border-radius: 12px;
+	display: flex;
+	padding:4px;
+	padding-right:0px;
+	padding-left: 10px;
+	cursor:pointer;
+}
+#languageContainer img{
+	width:40px;
+}
+.vraagteken{
+	font-family: Arial, Helvetica, sans-serif;
+}
+.homepageDiv{
+	height: 100vh;
+	max-height: 130vh;
+	border: 1px solid #046380;
+	border-top: none;
+}
+@media screen and (max-width: 480px)
+{ 
+	#menuButtonDiv{
+		width: 100px;
+	}
+	#sideBarNav{
+		width: 100px;
+		font-size: 18px;
+	}
+	.rightNavLabels{
+		display:none;
+	}
+}
+

@@ -1,0 +1,174 @@
+/* CSS Document */
+body{
+	background-image:  url('../img/projectsbackground2.jpg');
+	background-attachment: fixed;
+}
+#projectsIntroContainer{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	color: #002f2f;	
+	
+
+}
+#webshopContainer{
+	display: flex;
+	justify-content: center;
+}
+.contents{
+	font-size: 24px;
+	
+}
+.titles{
+	font-size: 72px;	
+	transition:all 0.4s ease;
+	color: #046380;
+}
+#introTitle{
+	margin-top:100px;	
+}
+#webshopImg{
+	width: 40vw;
+}
+#calcImg{
+	width: 275px;
+}
+#radioImg{
+	width: 60vw;
+}
+#introContentContainer{
+	margin-top: 15px;
+	cursor:pointer;	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+}
+.mySlides{
+	transition:all 0.4s ease;
+	-webkit-transition: all 0.4s ease;	
+}
+#introTextContainer{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	max-width:800px;
+	text-align:center;
+	padding: 10px;
+	border-radius: 6px;
+	box-shadow: 0px 0px 30px grey;
+	z-index:4;
+}
+#webDevelopProjects{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+#webDevelopContent{
+	text-align:center;
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 6px;
+	box-shadow: 0px 0px 30px grey;
+}
+#webDevelopProjects a,#introTextContainer a{
+	text-decoration: underline;
+	cursor:pointer;
+	color: #046380;
+	z-index: 7;
+	transition:all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+}
+#webDevelopProjects a:hover{
+	color:#002f2f;
+}
+#introTextContainer a:hover{
+	color:#002f2f;
+}
+@media screen and (max-width: 750px)
+{ 
+	#webshopImg{
+		width: 400px;
+	}
+	#radioImg{
+		width: 400px;
+	}
+	#calcImg{
+		width: 230px;
+	}
+}
+@media screen and (max-width: 650px)
+{ 
+	.titles{
+		font-size: 48px;	
+	}
+	.contents{
+		font-size: 24px;
+	}
+	#webshopImg{
+		width: 100vw;
+	}
+	#calcImg{
+		width: 200px;
+	}
+	#radioImg{
+		width: 100vw;
+	}
+	#introTitle{
+		margin-top:170px;	
+	}
+	
+}
+@media screen and (max-width: 480px)
+{ 
+
+	.titles{
+		font-size: 32px;	
+	}
+	.contents{
+		font-size: 18px;	
+	}
+	#rightNavContainer{
+		display:none;	
+	}
+}
+@media screen and (max-height: 480px)
+{ 
+	.titles{
+		font-size: 32px;	
+	}
+	.contents{
+		font-size: 12px;	
+	}
+	#webshopImg{
+		width: 340px;
+	}
+	#radioImg{
+		width: 400px;
+	}
+	#calcImg{
+		width: 160px;
+	}
+	#introTitle{
+		margin-top: 50vh;
+		margin-right: 10px;	
+	}
+	#introContentContainer{
+		margin-top: 80px;
+		margin-bottom: 0px;
+	}
+	#projectsIntroContainer{
+		flex-direction:row;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	#rightNavContainer{
+		display:none;	
+	}
+}
