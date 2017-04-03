@@ -1,14 +1,16 @@
 /* CSS Document */
 body{
-	background-image:  url('../img/projectsbackground2.jpg');
-	background-attachment: fixed;
+	/*background-image:  url('../img/projectsbackground2.jpg');
+	background-attachment: fixed;*/
 }
 #projectsIntroContainer{
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	color: #002f2f;	
+	color: #002f2f;
+	background-color: #046380;
+	box-shadow: 0px 3px 2px #888888;
 }
 #webshopContainer{
 	display: flex;
@@ -27,6 +29,7 @@ body{
 }
 #introTitle{
 	margin-top:100px;	
+	color: white;
 }
 #webshopImg{
 	width: 40vw;
@@ -85,6 +88,9 @@ body{
 	z-index: 7;
 	transition:all 0.4s ease;
 	-webkit-transition: all 0.4s ease;
+}
+#introTextContainer a{
+	color: white;
 }
 #webDevelopProjects a:hover{
 	color:#002f2f;
