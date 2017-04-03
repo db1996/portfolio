@@ -137,7 +137,6 @@ Header{
 .homepageDiv{
 	height: 100vh;
 	max-height: 130vh;
-	border: 1px solid #046380;
 	border-top: none;
 }
 @media screen and (max-width: 480px)

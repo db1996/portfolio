@@ -9,12 +9,10 @@ body{
 	justify-content: flex-start;
 	align-items: center;
 	color: #002f2f;	
-	
-
 }
 #webshopContainer{
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	height: 200vh;
 	max-height: 200vh;
 }
