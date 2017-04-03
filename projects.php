@@ -70,10 +70,10 @@
     </div>
 <!-- right nav's end fold -->
     <div id="projectsIntroContainer" class="homepageDiv">
-    	<div id="introTitle" class="titles"><label>Projecten</label></div>
+    	<div id="introTitle" class="titlesBlue"><label>Projecten</label></div>
         <div id="introContentContainer">
         	<div class="contents" id="introTextContainer">
-            	<label>Op deze pagina staan alle projecten die ik gemaakt heb.<br><a onClick="rightNavClick(1);">Klik hier</a> om al mijn Web Development projecten te zien en <a onClick="rightNavClick(3);">Klik hier</a> om naar mijn C# projecten te gaan</label>
+            	<label>Op deze pagina staan alle projecten die ik gemaakt heb.<br><a class="klikHierLink" onClick="rightNavClick(1);">Klik hier</a> om al mijn Web Development projecten te zien en <a class="klikHierLink" onClick="rightNavClick(3);">Klik hier</a> om naar mijn C# projecten te gaan</label>
             </div>
             <div id="slidecontainer" class="w3-content w3-section"
             onmouseover="imageoverlay(0);"
@@ -90,11 +90,11 @@
     <div id="webDevelopProjects" class="homepageDiv">
     	<div class="titles"><label>Web Development</label></div>
         <div id="webDevelopContent" class="contents">
-        	<label>Hieronder vind je alle projecten die ik heb gedaan met Web Development.<br/>Wil je de projecten zien die ik met C# heb gedaan<span class="vraagteken">?</span> <a onClick="rightNavClick(1);">Klik hier!</a></label>
+        	<label>Hieronder vind je alle projecten die ik heb gedaan met Web Development.<br/>Wil je de projecten zien die ik met C# heb gedaan<span class="vraagteken">?</span> <a class="klikHierLink" onClick="rightNavClick(1);">Klik hier!</a></label>
         </div>
  	</div>
     <div id="webshopContainer" class="homepageDiv">
-    	<div class="titles"><label>GameWorld</label></div>
+    	<div class="titlesBlue"><label>GameWorld</label></div>
         <div class="contents">
         	
         </div>
@@ -106,7 +106,7 @@
         </div>
     </div>
     <div id="calcContainer" class="homepageDiv">
-    	<div class="titles"><label>Calculator</label></div>
+    	<div  class="titles"><label>Calculator</label></div>
         <div class="contents">
         	
         </div>

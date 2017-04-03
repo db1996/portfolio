@@ -3,21 +3,6 @@ body{
 	/*background-image:  url('../img/projectsbackground2.jpg');
 	background-attachment: fixed;*/
 }
-#projectsIntroContainer{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	color: #002f2f;
-	background-color: #046380;
-	box-shadow: 0px 3px 2px #888888;
-}
-#webshopContainer{
-	display: flex;
-	flex-direction: column;
-	height: 200vh;
-	max-height: 200vh;
-}
 .contents{
 	font-size: 24px;
 	
@@ -27,18 +12,22 @@ body{
 	transition:all 0.4s ease;
 	color: #046380;
 }
-#introTitle{
-	margin-top:100px;	
+
+.titlesBlue{
+	font-size: 72px;	
+	transition:all 0.4s ease;
 	color: white;
 }
-#webshopImg{
-	width: 40vw;
-}
-#calcImg{
-	width: 275px;
-}
-#radioImg{
-	width: 60vw;
+
+/*First vh container*/
+#projectsIntroContainer{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	color: #002f2f;
+	background-color: #046380;
+
 }
 #introContentContainer{
 	margin-top: 15px;
@@ -48,10 +37,6 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;	
-}
-.mySlides{
-	transition:all 0.4s ease;
-	-webkit-transition: all 0.4s ease;	
 }
 #introTextContainer{
 	margin-bottom: 10px;
@@ -63,40 +48,27 @@ body{
 	text-align:center;
 	padding: 10px;
 	border-radius: 6px;
+	background-color: #e6e2af;
 	box-shadow: 0px 0px 30px grey;
 	z-index:4;
 }
-#webDevelopProjects{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	
+#introTitle{
+	margin-top:100px;
 }
 
-#webDevelopContent{
-	text-align:center;
-	margin-top: 10px;
-	padding: 10px;
-	border-radius: 6px;
-	box-shadow: 0px 0px 30px grey;
+#webshopImg{
+	width: 40vw;
 }
-#webDevelopProjects a,#introTextContainer a{
-	text-decoration: underline;
-	cursor:pointer;
-	color: #046380;
-	z-index: 7;
+#calcImg{
+	width: 275px;
+}
+#radioImg{
+	width: 60vw;
+}
+
+.mySlides{
 	transition:all 0.4s ease;
-	-webkit-transition: all 0.4s ease;
-}
-#introTextContainer a{
-	color: white;
-}
-#webDevelopProjects a:hover{
-	color:#002f2f;
-}
-#introTextContainer a:hover{
-	color:#002f2f;
+	-webkit-transition: all 0.4s ease;	
 }
 #imageSlideOverlay{
 	transition:all 0.4s ease;
@@ -112,11 +84,56 @@ body{
 	left: 0px;
 	top: 0px;
 	opacity: 0;
-	background-color: rgba(166,166,166,0.85);
+	background-color: rgba(4,99,128,0.65);
 	pointer-events:none;
 }
 .w3-content{
 	position: relative;
+}
+/*second vh container 'Web development'*/
+#webDevelopProjects{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 0px 30px black;
+	
+}
+#webDevelopContent{
+	text-align:center;
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 6px;
+	box-shadow: 0px 0px 30px grey;
+}
+
+
+/*third vh container 'gameworld'*/
+#webshopContainer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 200vh;
+	max-height: 200vh;
+	color: #002f2f;
+	background-color: #046380;
+}
+
+
+
+
+/*All 'click here' links in texts*/
+.klikHierLink{
+	text-decoration: underline;
+	cursor:pointer;
+	color: #046380;
+	z-index: 7;
+	transition:all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+}
+
+.klikHierLink:hover{
+	color:#002f2f;
 }
 @media screen and (max-width: 750px)
 { 
