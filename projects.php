@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/projects.css">
 </head>
 <body onLoad="checkScrollPos(true,1);" onscroll="checkScrollPos();">
-
+<!-- Fold header -->
     <header id="mainHeader">
         <div class="logoDiv">
             <a class="navCurrIndex">Dylan Bos</a>
@@ -24,7 +24,8 @@
     <div id="menuButtonDiv">
         <img id="menuButtImg" onClick="menuClick();" src="img/menu_button.png">
     </div>
-    
+<!-- Fold end Header -->
+<!-- right nav's fold -->
     <div id="rightNavContainer">
         <div id="rightnavContainer1" 
         onMouseOver="rightNavHover('RightNavLabel1','rightnavContainer1')" 
@@ -53,23 +54,36 @@
         <div id="rightnavContainer4" 
         onMouseOver="rightNavHover('RightNavLabel4','rightnavContainer4')" 
         onMouseOut="rightNavLeave('RightNavLabel4','rightnavContainer4');" 
-        onClick="rightNavClick(3);" 
+        onClick="rightNavClick(4);" 
         class="rightNavLinkContainer">
             <label class="rightNavLabels" id="RightNavLabel4">RadioGaga</label>
             <div   class="rightNavLinks"></div>
         </div>
+        <div id="rightnavContainer5" 
+        onMouseOver="rightNavHover('RightNavLabel5','rightnavContainer5')" 
+        onMouseOut="rightNavLeave('RightNavLabel5','rightnavContainer5');" 
+        onClick="rightNavClick(5);" 
+        class="rightNavLinkContainer">
+            <label class="rightNavLabels" id="RightNavLabel5">Calculator</label>
+            <div   class="rightNavLinks"></div>
+        </div>
     </div>
+<!-- right nav's end fold -->
     <div id="projectsIntroContainer" class="homepageDiv">
     	<div id="introTitle" class="titles"><label>Projecten</label></div>
         <div id="introContentContainer">
         	<div class="contents" id="introTextContainer">
             	<label>Op deze pagina staan alle projecten die ik gemaakt heb.<br><a onClick="rightNavClick(1);">Klik hier</a> om al mijn Web Development projecten te zien en <a onClick="rightNavClick(3);">Klik hier</a> om naar mijn C# projecten te gaan</label>
             </div>
-            <div class="w3-content w3-section">
-              <img class="mySlides" onClick="rightNavClick(2);" id="webshopImg" src="img/webshop.jpg">
-              <img class="mySlides" onClick="rightNavClick(4);" id="radioImg" src="img/radiogaga.jpg">
-              <img class="mySlides" onClick="rightNavClick(3);" id="calcImg" src="img/calculator.jpg">
-              
+            <div id="slidecontainer" class="w3-content w3-section"
+            onmouseover="imageoverlay(0);"
+            onmouseout="imageoverlay(1);">
+                <img class="mySlides" onClick="rightNavClick(2);" id="webshopImg" src="img/webshop.jpg">
+                <img class="mySlides" onClick="rightNavClick(4);" id="radioImg" src="img/radiogaga.jpg">
+                <img class="mySlides" onClick="rightNavClick(5);" id="calcImg" src="img/calculator.jpg">
+                <div id="imageSlideOverlay">
+                    <label>Click to go to this project</label>
+                </div>
             </div>
         </div>
  	</div>
@@ -85,18 +99,19 @@
         	
         </div>
  	</div>
+    <div id="radioGaga" class="homepageDiv">
+        <div class="titles"><label>RadioGaga</label></div>
+        <div class="contents">
+            
+        </div>
+    </div>
     <div id="calcContainer" class="homepageDiv">
     	<div class="titles"><label>Calculator</label></div>
         <div class="contents">
         	
         </div>
  	</div>
-    <div id="radioGaga" class="homepageDiv">
-    	<div class="titles"><label>RadioGaga</label></div>
-        <div class="contents">
-        	
-        </div>
- 	</div>
+    
 
     
     <!--<script type="text/javascript" src="js/slideshow.js"></script>-->

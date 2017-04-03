@@ -32,8 +32,8 @@ function checkScrollPos(onload,page){
 		}
 		else if (page == 1){
 			carousel();
-			viewHeight = document.getElementById("webshopContainer").offsetHeight;	
-			viewWidth = document.getElementById("webshopContainer").offsetWidth;
+			viewHeight = document.getElementById("projectsIntroContainer").offsetHeight;	
+			viewWidth = document.getElementById("projectsIntroContainer").offsetWidth;
 		}
 		
 		var tmp = rightNavElem.offsetHeight;
@@ -198,4 +198,14 @@ var smooth_scroll_to = function(element, target, duration) {
         // boostrap the animation process
         setTimeout(scroll_frame, 0);
     });
+}
+function imageoverlay(mode){
+	var container = document.getElementById("slidecontainer");
+	var imageoverlay = document.getElementById("imageSlideOverlay");
+	if (mode == 0){
+		imageoverlay.style.opacity = '1';
+	}
+	else{
+		imageoverlay.style.opacity = '0';
+	}
 }
