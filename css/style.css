@@ -110,7 +110,6 @@ body{
 	}
 	.skillsTextDiv{
 		order: 0;
-		font-size: 18px;
 	}
 	.rightNavLabels{
 		display:none;
@@ -154,7 +153,6 @@ body{
 	}
 	.skillsTextDiv{
 		order: 0;
-		font-size: 12px;
 	}
 	.rightNavLabels{
 		display:none;
