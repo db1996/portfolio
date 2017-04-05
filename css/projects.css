@@ -341,4 +341,16 @@
 	#rightNavContainer{
 		display:none;	
 	}
+	#imageClickSource{
+		width: 90vw;
+	}
+	#imageClick{
+		padding: 1vw 1vw 1vw 1vw;
+		width: 95vw;
+		left: 1.5vw;
+		top: 10vh;
+	}
+	#imageClickLabel{
+		font-size: 18px;
+	}
 }
