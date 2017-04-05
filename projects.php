@@ -88,6 +88,7 @@
             </div>
         </div>
  	</div>
+    <div id="imageClickBlurBack"></div>
     <div id="imageClick" onclick="hideImageClick()">
         <label id="imageClickLabel"></label>
         <img id="imageClickSource" src="">

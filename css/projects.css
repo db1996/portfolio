@@ -207,6 +207,18 @@
 #imageClickLabel{
 	text-align: center;
 }
+#imageClickBlurBack{
+	position: fixed;
+	top:0px;
+	left:0px;
+	height: 100vh;
+	width: 100vw;
+	opacity: 0;
+	z-index: -99;
+	background-color: rgba(177,177,177,0.85);
+	transition:opacity 0.25s ease;
+	-webkit-transition: opacity 0.25s ease;
+}
 @media screen and (max-width: 750px)
 { 
 	#webshopImg{

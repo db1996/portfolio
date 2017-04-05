@@ -226,21 +226,28 @@ function imageClick(elem,txt){
 	var imgcontainer = document.getElementById("imageClick");
 	var imageelem = document.getElementById("imageClickSource");
 	var lbl = document.getElementById("imageClickLabel");
+	var backgroundBlur = document.getElementById("imageClickBlurBack");
+
+	
 	lbl.innerHTML = txt;
 	imageelem.src = elem.src;
 	imgcontainer.style.opacity = '1';
 	imgcontainer.style.zIndex = '200';
-
+	backgroundBlur.style.zIndex = '199';
+	backgroundBlur.style.opacity = '1';
 
 }
 function hideImageClick(){
 	var imgcontainer = document.getElementById("imageClick");
 	var imageelem = document.getElementById("imageClickSource");
 	var lbl = document.getElementById("imageClickLabel");
+	var backgroundBlur = document.getElementById("imageClickBlurBack");
 	if (imgcontainer.style.opacity = '1') 
 	{
 		imgcontainer.style.opacity = '0';
 		imgcontainer.style.zIndex = '-100';
+		backgroundBlur.style.zIndex = '-199';
+		backgroundBlur.style.opacity = '0';
 		
 	}
 	
