@@ -36,6 +36,10 @@ function checkScrollPos(onload,page){
 			viewHeight = document.getElementById("vhDiv1").offsetHeight;	
 			viewWidth = document.getElementById("vhDiv1").offsetWidth;
 		}
+		if (viewWidth <= 480) 
+		{
+			vhHeights[2] = 1.7;
+		}
 		
 		var tmp = rightNavElem.offsetHeight;
 		var newHeight = (viewHeight / 2)  - (tmp / 2);

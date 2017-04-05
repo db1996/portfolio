@@ -74,7 +74,7 @@
     	<div id="introTitle" class="titlesBlue"><label>Projecten</label></div>
         <div id="introContentContainer">
         	<div class="contents" id="introTextContainer">
-            	<label>Op deze pagina staan alle projecten die ik gemaakt heb.<br><a class="klikHierLink" onClick="rightNavClick(1);">Klik hier</a> om al mijn Web Development projecten te zien en <a class="klikHierLink" onClick="rightNavClick(5);">Klik hier</a> om naar mijn C# projecten te gaan</label>
+            	<label>Op deze pagina staan alle projecten die ik gemaakt heb.<br><a class="klikHierLink" onClick="rightNavClick(1);">Klik hier</a> om al mijn Web Development projecten te zien en <a class="klikHierLink" onClick="rightNavClick(3);">Klik hier</a> om naar mijn C# projecten te gaan</label>
             </div>
             <div id="slidecontainer" class="w3-content w3-section"
             onmouseover="imageoverlay(0);"
