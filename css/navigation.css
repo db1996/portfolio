@@ -41,6 +41,7 @@ Header{
 	display: flex;
 	flex-wrap:wrap;
 	flex-direction: row;
+
 	align-items: center;
 	margin-right: 20px;	
 	margin-left: 16px;
@@ -54,7 +55,7 @@ Header{
 	position:fixed;
 	top:0px;
 	left: -150px;
-	z-index: 2;
+	z-index: 6;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -147,6 +148,7 @@ Header{
 	#sideBarNav{
 		width: 100px;
 		font-size: 18px;
+		z-index: 5;
 	}
 	.rightNavLabels{
 		display:none;

@@ -2,8 +2,8 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/navigation.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css?v=1">
+    <link rel="stylesheet" type="text/css" href="css/navigation.css?v=1">
 </head>
 <body onLoad="checkScrollPos(true,0);" onscroll="checkScrollPos();">
     <header id="mainHeader">

@@ -30,6 +30,7 @@ function checkScrollPos(onload,page){
 		if (page == 0){
 			viewHeight = document.getElementById("skillsContainer").offsetHeight;	
 			viewWidth = document.getElementById("skillsContainer").offsetWidth;	
+			document.getElementById("age").innerHTML = getAge("1996-05-21");
 		}
 		else if (page == 1){
 			carousel();
@@ -44,7 +45,7 @@ function checkScrollPos(onload,page){
 		var tmp = rightNavElem.offsetHeight;
 		var newHeight = (viewHeight / 2)  - (tmp / 2);
 		rightNavElem.style.top = String(newHeight) + "px";
-		document.getElementById("age").innerHTML = getAge("1996-05-21");
+		
 	}
 	pageyoff = window.pageYOffset;
 	if (pageyoff > 100){

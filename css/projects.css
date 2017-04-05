@@ -200,7 +200,7 @@
 }
 #imageClickSource{
 	margin-top: 10px;
-	max-width: 70vw;
+	max-width: 80vw;
 	max-height: 65vh;
 	cursor: pointer;
 }
@@ -262,6 +262,18 @@
 }
 @media screen and (max-width: 480px)
 { 
+	#imageClickSource{
+		width: 90vw;
+	}
+	#imageClick{
+		padding: 1vw 1vw 1vw 1vw;
+		width: 95vw;
+		left: 1.5vw;
+		top: 25vh;
+	}
+	#imageClickLabel{
+		font-size: 18px;
+	}
 	#vhDiv3{
 		height: 170vh;
 	}

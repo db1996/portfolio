@@ -1,8 +1,8 @@
 <!DOCTYPE html><head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="css/navigation.css">
-    <link rel="stylesheet" type="text/css" href="css/projects.css">
+    <link rel="stylesheet" type="text/css" href="css/navigation.css?v=1">
+    <link rel="stylesheet" type="text/css" href="css/projects.css?v=1">
     <meta charset="utf-8">
 </head>
 <body onLoad="checkScrollPos(true,1);" onscroll="checkScrollPos();">
