@@ -3,6 +3,7 @@
 	<title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="css/navigation.css">
     <link rel="stylesheet" type="text/css" href="css/projects.css">
+    <meta charset="utf-8">
 </head>
 <body onLoad="checkScrollPos(true,1);" onscroll="checkScrollPos();">
 <!-- Fold header -->
@@ -69,11 +70,11 @@
         </div>
     </div>
 <!-- right nav's end fold -->
-    <div id="projectsIntroContainer" class="homepageDiv">
+    <div id="vhDiv1" class="homepageDiv">
     	<div id="introTitle" class="titlesBlue"><label>Projecten</label></div>
         <div id="introContentContainer">
         	<div class="contents" id="introTextContainer">
-            	<label>Op deze pagina staan alle projecten die ik gemaakt heb.<br><a class="klikHierLink" onClick="rightNavClick(1);">Klik hier</a> om al mijn Web Development projecten te zien en <a class="klikHierLink" onClick="rightNavClick(3);">Klik hier</a> om naar mijn C# projecten te gaan</label>
+            	<label>Op deze pagina staan alle projecten die ik gemaakt heb.<br><a class="klikHierLink" onClick="rightNavClick(1);">Klik hier</a> om al mijn Web Development projecten te zien en <a class="klikHierLink" onClick="rightNavClick(5);">Klik hier</a> om naar mijn C# projecten te gaan</label>
             </div>
             <div id="slidecontainer" class="w3-content w3-section"
             onmouseover="imageoverlay(0);"
@@ -87,16 +88,50 @@
             </div>
         </div>
  	</div>
-    <div id="webDevelopProjects" class="homepageDiv">
+    <div id="imageClick" onclick="hideImageClick()">
+        <label id="imageClickLabel"></label>
+        <img id="imageClickSource" src="">
+    </div>
+    <div id="vhDiv2" class="homepageDiv">
     	<div class="titles"><label>Web Development</label></div>
         <div id="webDevelopContent" class="contents">
         	<label>Hieronder vind je alle projecten die ik heb gedaan met Web Development.<br/>Wil je de projecten zien die ik met C# heb gedaan<span class="vraagteken">?</span> <a class="klikHierLink" onClick="rightNavClick(1);">Klik hier!</a></label>
         </div>
  	</div>
-    <div id="webshopContainer" class="homepageDiv">
+    <div id="contentImageOverlay">
+        Klik voor meer informatie
+    </div>
+    <div id="vhDiv3" class="homepageDiv">
     	<div class="titlesBlue"><label>GameWorld</label></div>
-        <div class="contents">
-        	
+        <div id="webschopContent1" class="webschopContents">
+            <img onmouseover="contenOverlay(0,this);" 
+            onmouseleave="contenOverlay(1,this);"  
+            src="img/webschopImage1.png" 
+            class="imagesClickable" 
+            onclick="imageClick(this,'Dit is de home pagina van Gameworld')">
+            <div id="webshoptextdiv1" class="contents webschopTexts">
+                <label>Voor dit project moest ik een online gameshop maken met 3 categorieën: PC Xbox one en PS4</label>
+            </div>
+        </div>
+        <div id="webschopContent2" class="webschopContents">
+            <div id="webshoptextdiv2" class="contents webschopTexts">
+                <label>Alle games kunnen gesorteerd worden op verschillende criteria. Hier is veel JavaScript voor gebruikt.</label>
+            </div>
+            <img onmouseover="contenOverlay(0,this);" 
+            onmouseleave="contenOverlay(1,this);" 
+            src="img/webschopImage2.png" 
+            class="imagesClickable" 
+            onclick="imageClick(this,'Hier staan alle games, dit kan gesorteerd worden. En als de muis erover heen gaat krijg je informatie over de games')">
+        </div>
+        <div id="webschopContent3" class="webschopContents">
+            <img onmouseover="contenOverlay(0,this);" 
+            onmouseleave="contenOverlay(1,this);" 
+            src="img/webschopImage3.png" 
+            class="imagesClickable" 
+            onclick="imageClick(this,'Dit is waar er afgerekend kan worden, hier wordt de totaalprijs getoond en er kunnen games verwijderd worden.')">
+            <div id="webshoptextdiv3" class="contents webschopTexts">
+                <label>Hier worden alle games getoond, hier wordt een PHP session voor gebruikt.</label>
+            </div>
         </div>
  	</div>
     <div id="radioGaga" class="homepageDiv">
@@ -111,9 +146,6 @@
         	
         </div>
  	</div>
-    asd
-
-    
     <!--<script type="text/javascript" src="js/slideshow.js"></script>-->
     <script type="text/javascript" src="js/main.js"></script>
 </body>

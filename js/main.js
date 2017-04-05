@@ -32,8 +32,8 @@ function checkScrollPos(onload,page){
 		}
 		else if (page == 1){
 			carousel();
-			viewHeight = document.getElementById("projectsIntroContainer").offsetHeight;	
-			viewWidth = document.getElementById("projectsIntroContainer").offsetWidth;
+			viewHeight = document.getElementById("vhDiv1").offsetHeight;	
+			viewWidth = document.getElementById("vhDiv1").offsetWidth;
 		}
 		
 		var tmp = rightNavElem.offsetHeight;
@@ -208,4 +208,43 @@ function imageoverlay(mode){
 	else{
 		imageoverlay.style.opacity = '0';
 	}
+}
+function imageClick(elem,txt){
+	var imgcontainer = document.getElementById("imageClick");
+	var imageelem = document.getElementById("imageClickSource");
+	var lbl = document.getElementById("imageClickLabel");
+	lbl.innerHTML = txt;
+	imageelem.src = elem.src;
+	imgcontainer.style.opacity = '1';
+	imgcontainer.style.zIndex = '200';
+
+
+}
+function hideImageClick(){
+	var imgcontainer = document.getElementById("imageClick");
+	var imageelem = document.getElementById("imageClickSource");
+	var lbl = document.getElementById("imageClickLabel");
+	if (imgcontainer.style.opacity = '1') 
+	{
+		imgcontainer.style.opacity = '0';
+		imgcontainer.style.zIndex = '-100';
+		
+	}
+	
+}
+function contenOverlay(mode,elem){
+	if (mode == 0) 
+	{
+		var overlayContainer = document.getElementById("contentImageOverlay");
+		overlayContainer.style.left = elem.offsetLeft + "px";
+		overlayContainer.style.top = elem.offsetTop + "px";
+		overlayContainer.style.width = elem.offsetWidth + "px";
+		overlayContainer.style.height = elem.offsetHeight + 'px';
+		overlayContainer.style.opacity = '1';
+	}else{
+var overlayContainer = document.getElementById("contentImageOverlay");
+		overlayContainer.style.opacity = '0';
+	}
+		
+	
 }
