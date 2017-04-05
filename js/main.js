@@ -7,6 +7,7 @@ var menuButtImgElem = document.getElementById("menuButtImg");
 var rightNavElem = document.getElementById("rightNavContainer");
 var viewHeight;
 var viewWidth;
+var vhHeights = [1,.8,2,1,1];
 function getAge(dateString) 
 {
   var today = new Date();
@@ -101,9 +102,16 @@ function rightNavLeave(labelElem,containerElem){
 	elem2.style.backgroundColor = '';
 }
 function rightNavClick(elemnr){
-	
+	var x = 0;
+	var totalMultiplier = 0;
+	while (x < elemnr) {
+	    
+	    totalMultiplier += vhHeights[x];
+	    x++;
+	}
+
 	if (elemnr != -1){
-		smooth_scroll_to(document.body, elemnr * viewHeight, 600);
+		smooth_scroll_to(document.body, totalMultiplier * viewHeight, 600);
 	}
 }
 //carousel

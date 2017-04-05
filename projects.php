@@ -55,7 +55,7 @@
         <div id="rightnavContainer4" 
         onMouseOver="rightNavHover('RightNavLabel4','rightnavContainer4')" 
         onMouseOut="rightNavLeave('RightNavLabel4','rightnavContainer4');" 
-        onClick="rightNavClick(4);" 
+        onClick="rightNavClick(3);" 
         class="rightNavLinkContainer">
             <label class="rightNavLabels" id="RightNavLabel4">RadioGaga</label>
             <div   class="rightNavLinks"></div>
@@ -63,7 +63,7 @@
         <div id="rightnavContainer5" 
         onMouseOver="rightNavHover('RightNavLabel5','rightnavContainer5')" 
         onMouseOut="rightNavLeave('RightNavLabel5','rightnavContainer5');" 
-        onClick="rightNavClick(5);" 
+        onClick="rightNavClick(4);" 
         class="rightNavLinkContainer">
             <label class="rightNavLabels" id="RightNavLabel5">Calculator</label>
             <div   class="rightNavLinks"></div>

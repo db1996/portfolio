@@ -1,8 +1,4 @@
-/* CSS Document */
-body{
-	/*background-image:  url('../img/projectsbackground2.jpg');
-	background-attachment: fixed;*/
-}
+
 .contents{
 	font-size: 24px;
 	
@@ -123,6 +119,7 @@ body{
 #webschopContent1{
 	display:flex;
 	align-items: center;
+	justify-content: center;
 }
 .webschopTexts{
 	width:30vw;
