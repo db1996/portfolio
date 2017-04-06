@@ -37,7 +37,7 @@ function checkScrollPos(onload,page){
 			viewHeight = document.getElementById("vhDiv1").offsetHeight;	
 			viewWidth = document.getElementById("vhDiv1").offsetWidth;
 		}
-		if (viewWidth <= 480) 
+		if (viewWidth <= 650) 
 		{
 			vhHeights[2] = 1.7;
 		}

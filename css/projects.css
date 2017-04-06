@@ -53,13 +53,13 @@
 }
 
 #webshopImg{
-	width: 40vw;
+	width: 60vw;
 }
 #calcImg{
 	width: 275px;
 }
 #radioImg{
-	width: 60vw;
+	width: 70vw;
 }
 
 .mySlides{
@@ -110,6 +110,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	height: 200vh;
 	max-height: 200vh;
 	color: #002f2f;
@@ -252,7 +253,8 @@
 		width: 100vw;
 	}
 	#introTitle{
-		margin-top:170px;	
+		margin-top:170px;
+
 	}
 	.imagesClickable{
 		width: 90vw;
@@ -263,8 +265,10 @@
 		margin-bottom: 10px;
 		width: 70vw;
 	}
-
-
+	#vhDiv3{
+		height: 170vh;
+		max-height: 170vh;	
+	}
 	.webschopContents{
 		flex-direction: column;
 	}
@@ -286,9 +290,7 @@
 	#imageClickLabel{
 		font-size: 18px;
 	}
-	#vhDiv3{
-		height: 170vh;
-	}
+	
 	.titles{
 		font-size: 32px;	
 	}
@@ -352,5 +354,11 @@
 	}
 	#imageClickLabel{
 		font-size: 18px;
+	}
+}
+@media screen and (min-height: 800px)
+{
+	#vhDiv3{
+		height: 100vh;
 	}
 }

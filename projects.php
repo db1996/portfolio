@@ -80,8 +80,8 @@
             onmouseover="imageoverlay(0);"
             onmouseout="imageoverlay(1);">
                 <img class="mySlides" onClick="rightNavClick(2);" id="webshopImg" src="img/webshop.jpg">
-                <img class="mySlides" onClick="rightNavClick(4);" id="radioImg" src="img/radiogaga.jpg">
-                <img class="mySlides" onClick="rightNavClick(5);" id="calcImg" src="img/calculator.jpg">
+                <img class="mySlides" onClick="rightNavClick(3);" id="radioImg" src="img/radiogaga.jpg">
+                <img class="mySlides" onClick="rightNavClick(4);" id="calcImg" src="img/calculator.jpg">
                 <div id="imageSlideOverlay">
                     <label>Click to go to this project</label>
                 </div>

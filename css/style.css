@@ -103,6 +103,7 @@ body{
 	}
 	.skillsContentContainer{
 		flex-direction:column;
+		
 	}
 	.skillsLogosDiv{
 		order:1;
@@ -188,7 +189,7 @@ body{
 	}
 	.skillsContentContainer{
 		flex-direction:column;
-		
+		margin-top: 0px;
 	}
 	.skillsLogosDiv{
 		order:1;
