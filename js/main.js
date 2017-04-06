@@ -30,6 +30,7 @@ function getAge(dateString)
 
 //function used on load
 function funOnload(numOfDivs,page){
+	carousel();
 	//gets the viewport width and height from an invisible div on all pages
 	viewHeight = document.getElementById("viewportDiv").offsetHeight;	
 	viewWidth = document.getElementById("viewportDiv").offsetWidth;	
