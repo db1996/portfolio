@@ -232,7 +232,7 @@
 		width: 230px;
 	}
 }
-@media screen and (max-width: 650px)
+@media screen and (max-width: 649px)
 { 
 	.titles{
 		font-size: 48px;	
@@ -358,10 +358,23 @@
 }
 @media screen and (min-height: 800px)
 {
-	#vhDiv1{
-		height: 80vh;
+	@media screen and (min-width: 650px)
+	{ 
+		#vhDiv1{
+			height: 80vh;
+		}
+		#vhDiv3{
+			height: 115vh;
+		}
 	}
-	#vhDiv3{
-		height: 100vh;
+	@media screen and (min-width: 920px)
+	{ 
+		#vhDiv1{
+			height: 80vh;
+		}
+		#vhDiv3{
+			height: 100vh;
+		}
 	}
+	
 }
