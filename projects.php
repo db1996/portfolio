@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/projects.css?v=1">
     <meta charset="utf-8">
 </head>
-<body onLoad="checkScrollPos(true,1);" onscroll="checkScrollPos();">
+<body onLoad="funOnload(5,1);checkScrollPos();" onscroll="checkScrollPos();">
 <!-- Fold header -->
     <header id="mainHeader">
         <div class="logoDiv">
@@ -70,6 +70,7 @@
         </div>
     </div>
 <!-- right nav's end fold -->
+    <div id="viewportDiv"></div>
     <div id="vhDiv1" class="homepageDiv">
     	<div id="introTitle" class="titlesBlue"><label>Projecten</label></div>
         <div id="introContentContainer">
@@ -135,13 +136,13 @@
             </div>
         </div>
  	</div>
-    <div id="radioGaga" class="homepageDiv">
+    <div id="vhDiv4" class="homepageDiv">
         <div class="titles"><label>RadioGaga</label></div>
         <div class="contents">
             
         </div>
     </div>
-    <div id="calcContainer" class="homepageDiv">
+    <div id="vhDiv5" class="homepageDiv">
     	<div  class="titles"><label>Calculator</label></div>
         <div class="contents">
         	

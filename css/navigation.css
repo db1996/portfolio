@@ -99,7 +99,7 @@ Header{
 	align-items: flex-end;
 	transition:all 0.4s ease;
 	-webkit-transition: all 0.4s ease;
-	z-index: 3;
+	z-index: 100;
 	
 }
 .rightNavLabels{
@@ -139,6 +139,14 @@ Header{
 	height: 100vh;
 	max-height: 130vh;
 	border-top: none;
+}
+#viewportDiv
+{
+	height:100vh;
+	width: 100vw;
+	z-index: -200;
+	position: absolute;
+	visibility: hidden;
 }
 @media screen and (max-width: 480px)
 { 

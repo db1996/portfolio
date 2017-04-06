@@ -7,7 +7,9 @@ var menuButtImgElem = document.getElementById("menuButtImg");
 var rightNavElem = document.getElementById("rightNavContainer");
 var viewHeight;
 var viewWidth;
-var vhHeights = [1,.8,2,1,1];
+var vhHeights = [];
+
+// gets the age when you input a date (yyyy-mm-dd)
 function getAge(dateString) 
 {
   var today = new Date();
@@ -25,28 +27,28 @@ function getAge(dateString)
 	menuButElem.style.marginLeft = String(randnumx) +"px";
 	menuButElem.style.marginTop = String(randnumy) +"px";
 }*/
-function checkScrollPos(onload,page){
-	if (onload == true){ //everything in here happens on load
-		if (page == 0){
-			viewHeight = document.getElementById("skillsContainer").offsetHeight;	
-			viewWidth = document.getElementById("skillsContainer").offsetWidth;	
-			document.getElementById("age").innerHTML = getAge("1996-05-21");
-		}
-		else if (page == 1){
-			carousel();
-			viewHeight = document.getElementById("vhDiv1").offsetHeight;	
-			viewWidth = document.getElementById("vhDiv1").offsetWidth;
-		}
-		if (viewWidth <= 650) 
-		{
-			vhHeights[2] = 1.7;
-		}
-		
-		var tmp = rightNavElem.offsetHeight;
-		var newHeight = (viewHeight / 2)  - (tmp / 2);
-		rightNavElem.style.top = String(newHeight) + "px";
-		
+
+//function used on load
+function funOnload(numOfDivs,page){
+	//gets the viewport width and height from an invisible div on all pages
+	viewHeight = document.getElementById("viewportDiv").offsetHeight;	
+	viewWidth = document.getElementById("viewportDiv").offsetWidth;	
+	// gets the age only when on homepage.
+	if (page == 0){
+		document.getElementById("age").innerHTML = getAge("1996-05-21");
 	}
+	// gets all the heights from the Containers and puts them in the array (is used by smooth-scroll.)
+	for (var i = 1; i <= numOfDivs ; i++) {
+		tempElementHeight = document.getElementById("vhDiv" + i).offsetHeight;
+		vhHeights[i-1] = tempElementHeight/viewHeight;
+	}
+	var tmp = rightNavElem.offsetHeight;
+	var newHeight = (viewHeight / 2)  - (tmp / 2);
+	rightNavElem.style.top = String(newHeight) + "px";
+}
+
+// checks how far the page is scrolled down, and if neccesary, hides the top header 
+function checkScrollPos(){
 	pageyoff = window.pageYOffset;
 	if (pageyoff > 100){
 		headElem.style.top = '-100px';
@@ -73,6 +75,8 @@ function checkScrollPos(onload,page){
 	}
 	
 }
+
+// when clicked on the menu button on the left it will rotate and show the sideNavigation (only when scrolled down enough)
 function menuClick(){
 	var trans = menuButtImgElem.style.webkitTransform;
 	if (menuPressed == false){
@@ -90,6 +94,7 @@ function menuClick(){
 		menuPressed = false;
 	}
 }
+// what happens when you hover over the circles on the right
 function rightNavHover(elemName,elemName2){
 	elem = document.getElementById(elemName);
 	elem2 = document.getElementById(elemName2);
@@ -100,12 +105,14 @@ function rightNavHover(elemName,elemName2){
 		
 	
 }
+// what happens when you leave your mouse from the circles on the right
 function rightNavLeave(labelElem,containerElem){
 	elem = 	document.getElementById(labelElem);
 	elem2 = document.getElementById(containerElem);
 	elem.style.opacity = '0';
 	elem2.style.backgroundColor = '';
 }
+// what happens when you click them
 function rightNavClick(elemnr){
 	var x = 0;
 	var totalMultiplier = 0;
@@ -119,9 +126,10 @@ function rightNavClick(elemnr){
 		smooth_scroll_to(document.body, totalMultiplier * viewHeight, 600);
 	}
 }
+
+
 //carousel
 var myIndex = 0;
-
 function carousel() {
     var i;
     var x = document.getElementsByClassName("mySlides");
@@ -138,6 +146,7 @@ function carousel() {
 	x[myIndex-1].style.opacity = "1";  
     setTimeout(carousel, 3500); 
 }
+
 /**
     Smoothly scroll element to the given target (element.scrollTop)
     for the given duration
@@ -212,6 +221,8 @@ var smooth_scroll_to = function(element, target, duration) {
         setTimeout(scroll_frame, 0);
     });
 }
+
+// when hoverd over one of the images on the projects page from the JS slider, they show a div.
 function imageoverlay(mode){
 	var container = document.getElementById("slidecontainer");
 	var imageoverlay = document.getElementById("imageSlideOverlay");
@@ -222,6 +233,7 @@ function imageoverlay(mode){
 		imageoverlay.style.opacity = '0';
 	}
 }
+// when one of the project images is clicked, a popup will be shown
 function imageClick(elem,txt){
 	var imgcontainer = document.getElementById("imageClick");
 	var imageelem = document.getElementById("imageClickSource");
@@ -237,6 +249,7 @@ function imageClick(elem,txt){
 	backgroundBlur.style.opacity = '1';
 
 }
+// hides the popup
 function hideImageClick(){
 	var imgcontainer = document.getElementById("imageClick");
 	var imageelem = document.getElementById("imageClickSource");
@@ -252,6 +265,7 @@ function hideImageClick(){
 	}
 	
 }
+// on hover, an overlay will be shown on the images
 function contenOverlay(mode,elem){
 	if (mode == 0) 
 	{

@@ -358,6 +358,9 @@
 }
 @media screen and (min-height: 800px)
 {
+	#vhDiv1{
+		height: 80vh;
+	}
 	#vhDiv3{
 		height: 100vh;
 	}

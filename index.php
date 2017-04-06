@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css?v=1">
     <link rel="stylesheet" type="text/css" href="css/navigation.css?v=1">
 </head>
-<body onLoad="checkScrollPos(true,0);" onscroll="checkScrollPos();">
+<body onLoad="funOnload(2,1);checkScrollPos();" onscroll="checkScrollPos();">
     <header id="mainHeader">
         <div class="logoDiv">
             <a class="navCurrIndex">Dylan Bos</a>
@@ -26,6 +26,7 @@
         <a class="links navprojects" href="projects.php">Projecten</a>
         <a class="links navContact" href="contact.php">Contact</a>
     </div>
+    <div id="viewportDiv"></div>
     <div id="menuButtonDiv" onmouseenter="moveMenuButton();">
         <img id="menuButtImg" onClick="menuClick();" src="img/menu_button.png">
     </div>
@@ -49,7 +50,7 @@
         </div>
     </div>
     
-    <div id="whoAmIContainer" class="homepageDiv">
+    <div id="vhDiv1" class="homepageDiv">
         <div class="titles">
             <label>Wie ben ik<span class="vraagteken">?</span></label>
         </div>
@@ -60,7 +61,7 @@
             </label>
         </div>
     </div>
-    <div class="homepageDiv" id="skillsContainer">
+    <div class="homepageDiv" id="vhDiv2">
         <div class="titles">
             <label>Wat kan ik<span class="vraagteken">?</span></label>
         </div>
