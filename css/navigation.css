@@ -146,6 +146,12 @@ Header{
 	width: 100vw;
 	z-index: -200;
 	position: absolute;
+	top:0px;
+	left: 0px;
+	right:0px;
+	bottom: 0px;
+	
+
 	visibility: hidden;
 }
 @media screen and (max-width: 480px)

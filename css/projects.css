@@ -53,13 +53,13 @@
 }
 
 #webshopImg{
-	width: 60vw;
+	width: 40vw;
 }
 #calcImg{
 	width: 275px;
 }
 #radioImg{
-	width: 70vw;
+	width: 60vw;
 }
 
 .mySlides{
@@ -92,11 +92,11 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 0px 0px 30px black;
+	
 	height: 80vh;
 	
 }
-#webDevelopContent{
+.whiteContents{
 	text-align:center;
 	margin-top: 10px;
 	padding: 10px;
@@ -142,12 +142,40 @@
 	display: flex;
 	align-items: center;
 }
+
+/*Fourth vh container: RadioGaga*/
+#vhDiv4{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+
+}
+.radioContents{
+	display: flex;
+	align-items: center;
+}
+.radioTexts{
+	max-width: 30vw;
+	margin: 0px 10px 0px 10px;
+}
 .imagesClickable{
 	align-self: center;
 	flex: 0 0 auto;
   	width: 50vw;
 }
 
+/*fifth div, Calculator*/
+#vhDiv5{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	max-height: 100vh;
+	color: #002f2f;
+	background-color: #046380;
+}
 /*All 'click here' links in texts*/
 .klikHierLink{
 	text-decoration: underline;

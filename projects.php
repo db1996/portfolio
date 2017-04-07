@@ -71,6 +71,13 @@
     </div>
 <!-- right nav's end fold -->
     <div id="viewportDiv"></div>
+    <div id="contentImageOverlay">Klik voor meer informatie</div>
+    <div id="imageClickBlurBack" onclick="hideImageClick()"></div>
+    <div id="imageClick" onclick="hideImageClick()">
+        <label id="imageClickLabel"></label>
+        <img id="imageClickSource" src="">
+    </div>
+
     <div id="vhDiv1" class="homepageDiv">
     	<div id="introTitle" class="titlesBlue"><label>Projecten</label></div>
         <div id="introContentContainer">
@@ -89,20 +96,14 @@
             </div>
         </div>
  	</div>
-    <div id="imageClickBlurBack" onclick="hideImageClick()"></div>
-    <div id="imageClick" onclick="hideImageClick()">
-        <label id="imageClickLabel"></label>
-        <img id="imageClickSource" src="">
-    </div>
+    
     <div id="vhDiv2" class="homepageDiv">
     	<div class="titles"><label>Web Development</label></div>
-        <div id="webDevelopContent" class="contents">
+        <div id="webDevelopContent" class="contents whiteContents">
         	<label>Hieronder vind je alle projecten die ik heb gedaan met Web Development.<br/>Wil je de projecten zien die ik met C# heb gedaan<span class="vraagteken">?</span> <a class="klikHierLink" onClick="rightNavClick(1);">Klik hier!</a></label>
         </div>
  	</div>
-    <div id="contentImageOverlay">
-        Klik voor meer informatie
-    </div>
+    
     <div id="vhDiv3" class="homepageDiv">
     	<div class="titlesBlue"><label>GameWorld</label></div>
         <div id="webschopContent1" class="webschopContents">
@@ -138,12 +139,30 @@
  	</div>
     <div id="vhDiv4" class="homepageDiv">
         <div class="titles"><label>RadioGaga</label></div>
-        <div class="contents">
+        <div id="radioContent1" class="radioContents">
+             <img onmouseover="contenOverlay(0,this);" 
+            onmouseleave="contenOverlay(1,this);" 
+            src="img/radiogagaHome.png" 
+            class="imagesClickable" 
+            onclick="imageClick(this,'Dit is de homepage van RadioGaga')">
+            <div class="contents whiteContents radioTexts">
+                <label>Voor deze opdracht heb ik een online muziek speler gemaakt met 3 albums.</label>
+            </div>
+        </div>
+        <div id="radioContent2" class="radioContents">
+        <div class="contents whiteContents radioTexts">
+                <label>Hier kunnen songs afgespeeld worden, en er kan tussen 3 albums gekozen worden. Hier wordt gebruikt gemaakt van een PHP array en javascript.</label>
+            </div>
+             <img onmouseover="contenOverlay(0,this);" 
+            onmouseleave="contenOverlay(1,this);" 
+            src="img/radiogaga.jpg" 
+            class="imagesClickable" 
+            onclick="imageClick(this,'Hier wordt er gekozen tussen de albums, en songs kunnen worden afgespeeld.')">
             
         </div>
     </div>
     <div id="vhDiv5" class="homepageDiv">
-    	<div  class="titles"><label>Calculator</label></div>
+    	<div  class="titlesBlue"><label>Calculator</label></div>
         <div class="contents">
         	
         </div>

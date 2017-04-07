@@ -34,6 +34,7 @@ function funOnload(numOfDivs,page){
 	//gets the viewport width and height from an invisible div on all pages
 	viewHeight = document.getElementById("viewportDiv").offsetHeight;	
 	viewWidth = document.getElementById("viewportDiv").offsetWidth;	
+	document.getElementById("viewportDiv").style.display = 'none';
 	// gets the age only when on homepage.
 	if (page == 0){
 		document.getElementById("age").innerHTML = getAge("1996-05-21");
