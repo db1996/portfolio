@@ -1,3 +1,35 @@
+<?php
+    include("/inc/connectToDB.php");
+    $db = ConnectToDatabase();
+    $titles=[];
+    $contents=[];
+    $result =  mysqli_query($db,"SELECT `titleText` FROM `titles`");
+    while($result2 = mysqli_fetch_assoc($result)){
+        $titles[] = $result2;   //places everything in the array
+    }
+    for ($i=0; $i < count($titles); $i++) { 
+        $titles[$i] = $titles[$i]['titleText'];
+    }
+
+    $result =  mysqli_query($db,"SELECT * FROM `div_info`");
+    while($result2 = mysqli_fetch_assoc($result)){
+        $count_contents[] = $result2;   //places everything in the array
+    }
+
+    for ($i=0; $i < count($count_contents); $i++) { 
+        $result =  mysqli_query($db,"SELECT `text` FROM `texts` WHERE `div_id` = $i");
+        while($result2 = mysqli_fetch_assoc($result)){
+            $contents[$i][] = $result2;   //places everything in the array
+        }
+        for ($x=0; $x < count($contents[$i]); $x++) { 
+            $contents[$i][$x] = $contents[$i][$x]['text'];
+        }
+    }
+    unset($count_contents);
+   
+
+?>
+
 <!DOCTYPE html><head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio</title>
@@ -5,7 +37,8 @@
     <link rel="stylesheet" type="text/css" href="css/projects.css?v=1">
     <meta charset="utf-8">
 </head>
-<body onLoad="funOnload(5,1);checkScrollPos();" onscroll="checkScrollPos();">
+
+<body onLoad="funOnload(6,1);checkScrollPos();" onscroll="checkScrollPos();">
 <!-- Fold header -->
     <header id="mainHeader">
         <div class="logoDiv">
@@ -41,7 +74,7 @@
         onMouseOut="rightNavLeave('RightNavLabel2','rightnavContainer2');" 
         onClick="rightNavClick(1);" 
         class="rightNavLinkContainer">
-            <label class="rightNavLabels" id="RightNavLabel2">Web Development</label>
+            <label class="rightNavLabels" id="RightNavLabel2"><?=$titles[1]?></label>
             <div   class="rightNavLinks"></div>
         </div>
         <div id="rightnavContainer3" 
@@ -49,7 +82,7 @@
         onMouseOut="rightNavLeave('RightNavLabel3','rightnavContainer3');" 
         onClick="rightNavClick(2);" 
         class="rightNavLinkContainer">
-            <label class="rightNavLabels" id="RightNavLabel3">GameWorld</label>
+            <label class="rightNavLabels" id="RightNavLabel3"><?=$titles[2]?></label>
             <div   class="rightNavLinks"></div>
         </div>
         <div id="rightnavContainer4" 
@@ -57,7 +90,7 @@
         onMouseOut="rightNavLeave('RightNavLabel4','rightnavContainer4');" 
         onClick="rightNavClick(3);" 
         class="rightNavLinkContainer">
-            <label class="rightNavLabels" id="RightNavLabel4">RadioGaga</label>
+            <label class="rightNavLabels" id="RightNavLabel4"><?=$titles[3]?></label>
             <div   class="rightNavLinks"></div>
         </div>
         <div id="rightnavContainer5" 
@@ -65,7 +98,15 @@
         onMouseOut="rightNavLeave('RightNavLabel5','rightnavContainer5');" 
         onClick="rightNavClick(4);" 
         class="rightNavLinkContainer">
-            <label class="rightNavLabels" id="RightNavLabel5">Calculator</label>
+            <label class="rightNavLabels" id="RightNavLabel5"><?=$titles[4]?></label>
+            <div   class="rightNavLinks"></div>
+        </div>
+        <div id="rightnavContainer6" 
+        onMouseOver="rightNavHover('RightNavLabel6','rightnavContainer6')" 
+        onMouseOut="rightNavLeave('RightNavLabel6','rightnavContainer6');" 
+        onClick="rightNavClick(5);" 
+        class="rightNavLinkContainer">
+            <label class="rightNavLabels" id="RightNavLabel6"><?=$titles[5]?> Projecten</label>
             <div   class="rightNavLinks"></div>
         </div>
     </div>
@@ -79,10 +120,10 @@
     </div>
 
     <div id="vhDiv1" class="homepageDiv">
-    	<div id="introTitle" class="titlesBlue"><label>Projecten</label></div>
+    	<div id="introTitle" class="titlesBlue"><label><?=$titles[0]?></label></div>
         <div id="introContentContainer">
         	<div class="contents" id="introTextContainer">
-            	<label>Op deze pagina staan alle projecten die ik gemaakt heb.<br><a class="klikHierLink" onClick="rightNavClick(1);">Klik hier</a> om al mijn Web Development projecten te zien en <a class="klikHierLink" onClick="rightNavClick(3);">Klik hier</a> om naar mijn C# projecten te gaan</label>
+            	<label><?=$contents[0][0]?></label>
             </div>
             <div id="slidecontainer" class="w3-content w3-section"
             onmouseover="imageoverlay(0);"
@@ -98,27 +139,27 @@
  	</div>
     
     <div id="vhDiv2" class="homepageDiv">
-    	<div class="titles"><label>Web Development</label></div>
+    	<div class="titles"><label><?=$titles[1]?></label></div>
         <div id="webDevelopContent" class="contents whiteContents">
-        	<label>Hieronder vind je alle projecten die ik heb gedaan met Web Development.<br/>Wil je de projecten zien die ik met C# heb gedaan<span class="vraagteken">?</span> <a class="klikHierLink" onClick="rightNavClick(1);">Klik hier!</a></label>
+        	<label><?=$contents[1][0]?></label>
         </div>
  	</div>
     
     <div id="vhDiv3" class="homepageDiv">
-    	<div class="titlesBlue"><label>GameWorld</label></div>
-        <div id="webschopContent1" class="webschopContents">
+    	<div class="titlesBlue"><label><?=$titles[2]?></label></div>
+        <div id="webschopContent1" class="webschopContents flex-contents">
             <img onmouseover="contenOverlay(0,this);" 
             onmouseleave="contenOverlay(1,this);"  
             src="img/webschopImage1.png" 
             class="imagesClickable" 
             onclick="imageClick(this,'Dit is de home pagina van Gameworld')">
-            <div id="webshoptextdiv1" class="contents webschopTexts">
-                <label>Voor dit project moest ik een online gameshop maken met 3 categorieën: PC Xbox one en PS4</label>
+            <div id="webshoptextdiv1" class="contents TextsBlue">
+                <label><?=$contents[2][0]?></label>
             </div>
         </div>
-        <div id="webschopContent2" class="webschopContents">
-            <div id="webshoptextdiv2" class="contents webschopTexts">
-                <label>Alle games kunnen gesorteerd worden op verschillende criteria. Hier is veel JavaScript voor gebruikt.</label>
+        <div id="webschopContent2" class="webschopContents flex-contents">
+            <div id="webshoptextdiv2" class="contents TextsBlue">
+                <label><?=$contents[2][1]?></label>
             </div>
             <img onmouseover="contenOverlay(0,this);" 
             onmouseleave="contenOverlay(1,this);" 
@@ -126,32 +167,32 @@
             class="imagesClickable" 
             onclick="imageClick(this,'Hier staan alle games, dit kan gesorteerd worden. En als de muis erover heen gaat krijg je informatie over de games')">
         </div>
-        <div id="webschopContent3" class="webschopContents">
+        <div id="webschopContent3" class="webschopContents flex-contents">
             <img onmouseover="contenOverlay(0,this);" 
             onmouseleave="contenOverlay(1,this);" 
             src="img/webschopImage3.png" 
             class="imagesClickable" 
             onclick="imageClick(this,'Dit is waar er afgerekend kan worden, hier wordt de totaalprijs getoond en er kunnen games verwijderd worden.')">
-            <div id="webshoptextdiv3" class="contents webschopTexts">
-                <label>Hier worden alle games getoond, hier wordt een PHP session voor gebruikt.</label>
+            <div id="webshoptextdiv3" class="contents TextsBlue">
+                <label><?=$contents[2][2]?></label>
             </div>
         </div>
  	</div>
     <div id="vhDiv4" class="homepageDiv">
-        <div class="titles"><label>RadioGaga</label></div>
-        <div id="radioContent1" class="radioContents">
+        <div class="titles"><label><?=$titles[3]?></label></div>
+        <div id="radioContent1" class="radioContents flex-contents">
              <img onmouseover="contenOverlay(0,this);" 
             onmouseleave="contenOverlay(1,this);" 
             src="img/radiogagaHome.png" 
             class="imagesClickable" 
             onclick="imageClick(this,'Dit is de homepage van RadioGaga')">
             <div class="contents whiteContents radioTexts">
-                <label>Voor deze opdracht heb ik een online muziek speler gemaakt met 3 albums.</label>
+                <label><?=$contents[3][0]?></label>
             </div>
         </div>
-        <div id="radioContent2" class="radioContents">
-        <div class="contents whiteContents radioTexts">
-                <label>Hier kunnen songs afgespeeld worden, en er kan tussen 3 albums gekozen worden. Hier wordt gebruikt gemaakt van een PHP array en javascript.</label>
+        <div id="radioContent2" class="radioContents flex-contents">
+            <div class="contents whiteContents radioTexts">
+                    <label><?=$contents[3][1]?></label>
             </div>
              <img onmouseover="contenOverlay(0,this);" 
             onmouseleave="contenOverlay(1,this);" 
@@ -162,11 +203,32 @@
         </div>
     </div>
     <div id="vhDiv5" class="homepageDiv">
-    	<div  class="titlesBlue"><label>Calculator</label></div>
-        <div class="contents">
-        	
+        <div  class="titlesBlue"><label><?=$titles[4]?></label></div>
+        <div class="contents calculatorContents flex-contents">
+            <img onmouseover="contenOverlay(0,this);" 
+            onmouseleave="contenOverlay(1,this);" 
+            src="img/calculator.jpg" 
+            class="imagesClickable calculatorImage" 
+            onclick="imageClick(this,'Dit is het design van de calculator')">
+            <div class="TextsBlue">
+                    <label><?=$contents[4][0]?></label>
+            </div>
         </div>
- 	</div>
+    </div>
+    <div id="vhDiv6" class="homepageDiv">
+        <div class="titles"><label><?=$titles[5]?></label></div>
+        <div id="cSharpContent1" class="contents whiteContents">
+            <label><?=$contents[5][0]?></label>
+        </div>
+        <div id="cSharpContent2" class="contents flex-contents">
+            <div  class="whiteContents cSharpContent "><label><?=$contents[5][1]?></label></div>
+            <img src="img/visual_studio.png">
+        </div>
+    </div>
+    <?php 
+        // dump($titles) ;
+        // dump($contents) ;
+    ?>
     <!--<script type="text/javascript" src="js/slideshow.js"></script>-->
     <script type="text/javascript" src="js/main.js"></script>
 </body>

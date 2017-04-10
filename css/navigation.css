@@ -55,7 +55,7 @@ Header{
 	position:fixed;
 	top:0px;
 	left: -150px;
-	z-index: 6;
+	z-index: 100;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -67,7 +67,6 @@ Header{
 	-webkit-transition: all 0.3s ease;
 	width: 30px;
 	cursor: pointer;
-	z-index: 100;
 }
 #menuButtonDiv img:hover{
 	width: 40px;
@@ -85,6 +84,7 @@ Header{
 	background-color:rgba(230,226,175,1);
 	transition:all 0.4s ease;
 	-webkit-transition: all 0.4s ease;
+	z-index: 99;
 }
 #flexItem{
 	margin-top: 100px;	
@@ -160,7 +160,7 @@ Header{
 		width: 100px;
 	}
 	#sideBarNav{
-		width: 100px;
+		width: 120px;
 		font-size: 18px;
 		z-index: 5;
 	}
