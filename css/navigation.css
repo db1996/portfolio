@@ -9,19 +9,19 @@ Header{
 	font-size: 24px;
 	position: fixed;
 	width: 100%;
-	background-color: #e6e2af;
+	background-color: #002f2f;
 	display: flex;
 	flex-wrap: wrap;
 	z-index:5;
 	justify-content: space-between;
-	box-shadow: 0px 5px 25px #888888;
+	box-shadow: 0px 5px 25px black;
 	padding: 20px 0px 20px 0px;
 	transition:all 0.4s ease;
 	-webkit-transition: all 0.4s ease;
 }
 
 .links{
-	color: #046380;
+	color: white;
 	transition:all 0.4s ease;
 	-webkit-transition: all 0.4s ease;
 	padding: 5px;
@@ -30,7 +30,7 @@ Header{
 }
 .links:hover{
 	box-shadow: 0px 0px 25px black;
-	color: #002f2f;
+	color: white;
 	
 }
 .logoDiv{
@@ -47,7 +47,7 @@ Header{
 	margin-left: 16px;
 }
 .navCurrIndex{
-	color: #002f2f;
+	color: white;
 }
 #menuButtonDiv{
 	width: 80px;
@@ -81,7 +81,7 @@ Header{
 	display: flex;
 	flex-wrap:wrap;
 	flex-direction: column;
-	background-color:rgba(230,226,175,1);
+	background-color:#002f2f;
 	transition:all 0.4s ease;
 	-webkit-transition: all 0.4s ease;
 	z-index: 99;
@@ -153,6 +153,25 @@ Header{
 	
 
 	visibility: hidden;
+}
+footer{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 50px;
+	color: white;
+	background-color: #002f2f;
+}
+footer a{
+	color: white;
+	cursor: pointer;
+	transition:all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	text-decoration: none;
+}
+footer a:hover{
+	color:white;
+	box-shadow: 0px 0px 25px black;
 }
 @media screen and (max-width: 480px)
 { 

@@ -1,5 +1,6 @@
 <?php
     include("/inc/connectToDB.php");
+    $page = 2;
     $db = ConnectToDatabase();
     $titles=[];
     $contents=[];
@@ -225,11 +226,7 @@
             <img src="img/visual_studio.png">
         </div>
     </div>
-    <?php 
-        // dump($titles) ;
-        // dump($contents) ;
-    ?>
-    <!--<script type="text/javascript" src="js/slideshow.js"></script>-->
+    <?php include('/inc/footer.php');?>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

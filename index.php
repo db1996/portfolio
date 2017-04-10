@@ -1,3 +1,7 @@
+<?php
+    $page = 1;
+?>
+
 <!DOCTYPE html>
 <head>
 	<meta name="viewport"  content="width=device-width, initial-scale=1.0">
@@ -78,6 +82,7 @@
             </div>
         </div>
     </div>
+    <?php include('/inc/footer.php');?>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
