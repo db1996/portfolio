@@ -30,14 +30,17 @@ function getAge(dateString)
 
 //function used on load
 function funOnload(numOfDivs,page){
-	carousel();
+	
 	//gets the viewport width and height from an invisible div on all pages
 	viewHeight = document.getElementById("viewportDiv").offsetHeight;	
 	viewWidth = document.getElementById("viewportDiv").offsetWidth;	
 	document.getElementById("viewportDiv").style.display = 'none';
 	// gets the age only when on homepage.
-	if (page == 0){
+	if (page == 1){
 		document.getElementById("age").innerHTML = getAge("1996-05-21");
+	}
+	else if (page == 2){
+		carousel();
 	}
 	// gets all the heights from the Containers and puts them in the array (is used by smooth-scroll.)
 	for (var i = 1; i <= numOfDivs ; i++) {
