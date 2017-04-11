@@ -88,6 +88,7 @@ function menuClick(){
 		menuButtImgElem.style.webkitTransform = "rotate(-90deg)";
 		sideNavElem.style.left = '0px';
 		sideNavElem.style.opacity = '100';
+		
 		menuPressed = true;
 		
 	}

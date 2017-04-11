@@ -272,6 +272,20 @@
 	max-height: 65vh;
 	cursor: pointer;
 }
+#cross_img{
+	position: absolute;
+	background-color: #046380;
+	top: -15px;
+	right:-15px;
+	width: 30px;
+	padding: 7px;
+	border-radius: 50%;
+	transition:all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+}
+#cross_img:hover{
+	-webkit-transform: rotate(-360deg);
+}
 #imageClickLabel{
 	text-align: center;
 }
