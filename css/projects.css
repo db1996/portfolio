@@ -201,6 +201,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 20px;
 	
 }
 #cSharpContent2 img
@@ -212,6 +213,8 @@
 .cSharpContent{
 	width: 30vw;
 }
+
+/* seventh div, */
 /*All 'click here' links in texts*/
 .klikHierLink{
 	text-decoration: underline;

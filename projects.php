@@ -35,7 +35,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="css/navigation.css?v=1">
-    <link rel="stylesheet" type="text/css" href="css/projectsMin.css?v=1">
+    <link rel="stylesheet" type="text/css" href="css/projects.css?v=1">
     <meta charset="utf-8">
 </head>
 
@@ -206,11 +206,9 @@
     <div id="vhDiv5" class="homepageDiv">
         <div  class="titlesBlue"><label><?=$titles[4]?></label></div>
         <div class="contents calculatorContents flex-contents">
-            <img onmouseover="contenOverlay(0,this);" 
-            onmouseleave="contenOverlay(1,this);" 
+            <img
             src="img/calculator.jpg" 
-            class="imagesClickable calculatorImage" 
-            onclick="imageClick(this,'Dit is het design van de calculator')">
+            class=" calculatorImage">
             <div class="TextsBlue">
                     <label><?=$contents[4][0]?></label>
             </div>
@@ -225,6 +223,9 @@
             <div  class="whiteContents cSharpContent "><label><?=$contents[5][1]?></label></div>
             <img src="img/visual_studio.png">
         </div>
+    </div>
+    <div id="vhDiv7" class="homepageDiv">
+        <div class="titlesBlue"><label><?=$titles[5]?></label></div>
     </div>
     <?php include('/inc/footer.php');?>
     <script type="text/javascript" src="js/main.js"></script>
