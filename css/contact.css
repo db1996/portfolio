@@ -3,6 +3,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	height: 100vh;
 }
 .title{
 	font-size: 48px;
@@ -79,5 +80,13 @@ textarea{
 	textarea{
 		width: 72vw;
 	}
+	.title{
+	}
 
+}
+@media screen and (max-width: 480px)
+{
+	#container{
+		height: 120vh;
+	}
 }

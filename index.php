@@ -18,7 +18,7 @@
         <div class="navLinksDiv">
             <a class="links navAbout navCurrIndex">Over mij</a>
             <a class="links navprojects" href="projects.php">Projecten</a>
-            <a class="links navContact">Contact</a>
+            <a class="links navContact" href="contact.php">Contact</a>
             <!--<div id="languageContainer">
             	<img src="img/nederlands.png"/>
                 <img src="img/english.png"/>
