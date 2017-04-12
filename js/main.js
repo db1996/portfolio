@@ -288,3 +288,22 @@ var overlayContainer = document.getElementById("contentImageOverlay");
 		
 	
 }
+function visibleSquare(mode,squarenum){
+	var squareElem = document.getElementById("square" + squarenum);
+	if (squarenum != 3){
+		if (mode == 1){
+			squareElem.style.height = '37px'
+		}
+		else{
+			squareElem.style.height = '0px'
+		}
+	}
+	else{
+		if (mode == 1){
+			squareElem.style.height = '30vh'
+		}
+		else{
+			squareElem.style.height = '0px'
+		}
+	}
+}
