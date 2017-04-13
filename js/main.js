@@ -307,3 +307,56 @@ function visibleSquare(mode,squarenum){
 		}
 	}
 }
+
+function validateContact(){
+	var nameElem = document.getElementById("contactName");
+	var emailElem = document.getElementById("contactEmail");
+	var messageElem = document.getElementById("contactMessage");
+	var errormessages = [];
+	var errorcount = 0;
+	document.querySelector( "form" ).addEventListener( "invalid", function( event ) {
+ 	       event.preventDefault();
+    }, true);
+	if (nameElem.validity.valueMissing == true)
+    {
+    	errormessages.push("Your name")
+		nameElem.style.border = "1px solid red"
+		errorcount ++;
+    }
+	else{
+		nameElem.style.border = "1px solid rgb(169, 169, 169)"
+	}
+
+    if (emailElem.validity.valueMissing == true)
+    {
+    	errormessages.push("Your email")
+		errorcount ++;
+		emailElem.style.border = "1px solid red"
+    }
+	else{
+		emailElem.style.border = "1px solid rgb(169, 169, 169)"
+	}
+    
+    if (messageElem.validity.valueMissing == true)
+    {
+    	errormessages.push("The Message")
+		errorcount ++;
+		messageElem.style.border = "1px solid red"
+    }
+	else{
+		messageElem.style.border = "1px solid rgb(169, 169, 169)"
+	}
+    
+	
+	if (errorcount !=0){
+		document.getElementById("errorMessages").style.display = "block";
+		document.getElementById("errorMessages").style.color = "#D8000C";
+		document.getElementById("errorMessages").style.backgroundColor = "#FFBABA";
+		document.getElementById("errorMessages").style.border = "1px solid red";
+		document.getElementById("errorMessages").innerHTML = "Vul de aangegeven velden in";
+	}
+	else{
+		document.getElementById("errorMessages").style.display = "none";
+	}
+
+}

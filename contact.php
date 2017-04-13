@@ -1,5 +1,12 @@
 <?php
     $page = 3;
+    if (isset($_POST['formsubmit'])){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+
+        mail('dylanbos1996@gmail.com', 'Contact request', $message, 'asdasda');
+    }
 ?>
 
 <!DOCTYPE html><head>
@@ -36,17 +43,31 @@
     <label class="title">Contact</label>
     <label class="text">Neem contact met mij op door het onderstaande formulier in te vullen.<br/>Of <a class="klikHierLink" href="mailto:dylanbos1996@gmail.com">klik hier</a> om mij een mail te sturen</label>
     <form method="POST">
+        <div id="errorMessages"></div>
         <div class="smallInputsContainer">
             <div class="inputContainer">
-                <div id="square1" class="textSquare"></div><input onfocus="visibleSquare(1,1);" onblur="visibleSquare(0,1);" on class="textInputs" type="text" placeholder="Naam" name="name">
+                <div id="square1" class="textSquare"></div>
+                <input id="contactName" 
+                onfocus="visibleSquare(1,1);" 
+                onblur="visibleSquare(0,1);" 
+                class="textInputs" type="text" placeholder="Naam" required name="name">
             </div>
             <div id="inputcontainer2" class="inputContainer">
-                <div id="square2" class="textSquare"></div><input onfocus="visibleSquare(1,2);" onblur="visibleSquare(0,2);" class="textInputs" type="text" placeholder="E-mail" name="email">
+                <div id="square2" class="textSquare"></div>
+                <input id="contactEmail"  
+                onfocus="visibleSquare(1,2);" 
+                onblur="visibleSquare(0,2);" 
+                class="textInputs" type="email" placeholder="E-mail" required name="email">
             </div>
         </div>
         <div class="inputContainer">
-            <div id="square3" class="textSquare"></div><textarea onfocus="visibleSquare(1,3);" onblur="visibleSquare(0,3);" placeholder="Bericht" name="message"></textarea>
+            <div id="square3" class="textSquare"></div>
+            <textarea id="contactMessage" 
+            onfocus="visibleSquare(1,3);" 
+            onblur="visibleSquare(0,3);" 
+            placeholder="Bericht" name="message" required=""></textarea>
         </div>
+        <button onclick="validateContact();" name="formsubmit">Verstuur bericht</button>
         
     </form>
     
