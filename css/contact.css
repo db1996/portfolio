@@ -70,11 +70,23 @@ textarea{
 #errorMessages{
 	font-size: 14px;
 	padding: 10px;
-	display: none;
+	
 	text-align:center;
-	color: #D8000C;
+}
+.errorNone{
+	display: none;
+}
+.errorDanger{
+	display:block;
+	color:#D8000C;
 	background-color: #FFBABA;
 	border: 1px solid red;
+}
+.errorSuccess{
+	display:block;
+	color: #4F8A10;
+	background-color: #DFF2BF;
+	border: 1px solid green;
 }
 @media screen and (max-width: 720px)
 { 

@@ -1,11 +1,53 @@
 <?php
     $page = 3;
-    if (isset($_POST['formsubmit'])){
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
+    $msg = '';
+    $msgClass = 'errorNone';
+    if(isset($_POST['formsubmit'])){
+        // Get Form Data
+        $name = htmlspecialchars($_POST['name']);
+        $email = htmlspecialchars($_POST['email']);
+        $message = htmlspecialchars($_POST['message']);
 
-        mail('dylanbos1996@gmail.com', 'Contact request', $message, 'asdasda');
+        // Check Required Fields
+        if(!empty($email) && !empty($name) && !empty($message)){
+            // Passed
+            // Check Email
+            if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+                // Failed
+                $msg = 'Het gebruikte e-mail adres is geen goed e-mail adres';
+                $msgClass = 'errorDanger';
+            } else {
+                // Passed
+                $toEmail = 'dylanbos1996@gmail.com';
+                $subject = $name.' wil contact met je maken';
+                $body = '<h2>Contact aanvraag</h2>
+                    <h4>Naam</h4><p>'.$name.'</p>
+                    <h4>E-mail</h4><p>'.$email.'</p>
+                    <h4>Bericht</h4><p>'.$message.'</p>
+                ';
+
+                // Email Headers
+                $headers = "MIME-Version: 1.0" ."\r\n";
+                $headers .="Content-Type:text/html;charset=UTF-8" . "\r\n";
+
+                // Additional Headers
+                $headers .= "From: " .$name. "<".$email.">". "\r\n";
+
+                if(mail($toEmail, $subject, $body, $headers)){
+                    // Email Sent
+                    $msg = 'De E-mail is succesvol verzonden';
+                    $msgClass = 'errorSuccess';
+                } else {
+                    // Failed
+                    $msg = 'De e-mail is helaas niet verzonden';
+                    $msgClass = 'errorDanger';
+                }
+            }
+        } else {
+            // Failed
+            $msg = 'Niet alle velden zijn ingevuld';
+            $msgClass = 'errorDanger';
+        }
     }
 ?>
 
@@ -43,7 +85,7 @@
     <label class="title">Contact</label>
     <label class="text">Neem contact met mij op door het onderstaande formulier in te vullen.<br/>Of <a class="klikHierLink" href="mailto:dylanbos1996@gmail.com">klik hier</a> om mij een mail te sturen</label>
     <form method="POST">
-        <div id="errorMessages"></div>
+        <div id="errorMessages" class="<?=$msgClass?>"><?=$msg?></div>
         <div class="smallInputsContainer">
             <div class="inputContainer">
                 <div id="square1" class="textSquare"></div>

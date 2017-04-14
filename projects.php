@@ -221,12 +221,25 @@
             <label><?=$contents[5][0]?></label>
         </div>
         <div id="cSharpContent2" class="contents flex-contents">
-            <div  class="whiteContents cSharpContent "><label><?=$contents[5][1]?></label></div>
-            <img src="img/visual_studio.png">
+            <img onmouseover="contenOverlay(0,this);" 
+            onmouseleave="contenOverlay(1,this);" 
+            src="img/raadhetgetal.png" 
+            class="imagesClickable" 
+            onclick="imageClick(this,'Dit is een spel waarbij er een willekeurig getal wordt gegenereerd. En deze moet je dan gaan raden.')">
+
+            <img onmouseover="contenOverlay(0,this);" 
+            onmouseleave="contenOverlay(1,this);" 
+            src="img/kluisCSharp.png" 
+            class="imagesClickable" 
+            onclick="imageClick(this,'Dit is een kluis met een 3 cijferige code')">
         </div>
-    </div>
-    <div id="vhDiv7" class="homepageDiv">
-        <div class="titlesBlue"><label><?=$titles[5]?></label></div>
+        <div id="cSharpContent3" class="contents flex-contents">
+            <img onmouseover="contenOverlay(0,this);" 
+            onmouseleave="contenOverlay(1,this);" 
+            src="img/tunestore.png" 
+            class="imagesClickable" 
+            onclick="imageClick(this,'Dit is een muziekspeler. hier kunnen playlists meerdere playlists opgeslagen, geladen en afgespeeld worden.')">
+        </div>
     </div>
     <?php include('/inc/footer.php');?>
     <script type="text/javascript" src="js/main.js"></script>

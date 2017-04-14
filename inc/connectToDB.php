@@ -1,6 +1,6 @@
 <?php
     function ConnectToDatabase(){
-        $db = mysqli_connect("localhost:3306","dylanBos","admin1",'portfoliodylanbos');  //connects to the database from MyPHPAdmin
+        $db = mysqli_connect("localhost","root","usbw",'portfolio');  //connects to the database from MyPHPAdmin
         mysqli_query($db, "SET NAMES 'utf8'");          // to make sure all quotation marks are not weird symbols   
         return $db;
     }

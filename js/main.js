@@ -314,6 +314,7 @@ function validateContact(){
 	var messageElem = document.getElementById("contactMessage");
 	var errormessages = [];
 	var errorcount = 0;
+	var errorMessElem = document.getElementById("errorMessages");
 	document.querySelector( "form" ).addEventListener( "invalid", function( event ) {
  	       event.preventDefault();
     }, true);
@@ -349,14 +350,13 @@ function validateContact(){
     
 	
 	if (errorcount !=0){
-		document.getElementById("errorMessages").style.display = "block";
-		document.getElementById("errorMessages").style.color = "#D8000C";
-		document.getElementById("errorMessages").style.backgroundColor = "#FFBABA";
-		document.getElementById("errorMessages").style.border = "1px solid red";
-		document.getElementById("errorMessages").innerHTML = "Vul de aangegeven velden in";
+		errorMessElem.innerHTML = "Vul de aangegeven velden in";
+		errorMessElem.className = "errorDanger";
+
+		errorMessElem.style.display = 'block';
 	}
 	else{
-		document.getElementById("errorMessages").style.display = "none";
+		errorMessElem.className = "";
 	}
 
 }
