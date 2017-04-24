@@ -18,6 +18,7 @@
                 $msgClass = 'errorDanger';
             } else {
                 // Passed
+                asdasd
                 $toEmail = 'dylanbos1996@gmail.com';
                 $subject = $name.' wil contact met je maken';
                 $body = '<h2>Contact aanvraag</h2>
